@@ -16,7 +16,7 @@ export const SocketContextProvider = ({ children }) => {
     useEffect(() => {
         if (authUser) {
             // Establish a new socket connection
-            const socketInstance = io("http://localhost:5000", {
+            const socketInstance = io("https://chattin-app.onrender.com", {
                 query: { userId: authUser._id },
             });
 
